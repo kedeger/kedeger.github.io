@@ -2,6 +2,13 @@
 //Initiate the document:
 $(document).ready(function() {
 
+  // Tried to add background music:
+  // var obj = document.createElement("audio");
+  //       obj.src="images/west.mp3";
+  //       obj.volume=0.10;
+  //       obj.autoPlay=false;
+  //       obj.preLoad=true;     
+
   //assign variable to select which defintion to display by counting:
   var guessCount = 0;
   //assign var to count correct answers:
@@ -18,8 +25,7 @@ $(document).ready(function() {
       {"word":"ManBearPig", "definition":"a scary monster which is 'half man, half bear and half pig' and roams the Earth attacking humans for no reason at all. He also demands throughout the episode that people take him 'cereal', which he cannot distinguish from the correct use of the word 'seriously.' "},
   ];
 
-
-  //hide goku:
+  //hide everyone
   $("#goku").hide();
   $("#zombieBob").hide();
   $("#scaredBob").hide();
@@ -28,7 +34,7 @@ $(document).ready(function() {
 
   //call function to display defintions using counter:
   displayDefinition(words, guessCount);
-
+  
 
   //detect when instructions buttin clicked and show instructions
   $('#instructions').click(function(){
@@ -68,8 +74,6 @@ function displayDefinition(words, guessCount) {
    }, 9000, function() {
    } );
   timeUp = setTimeout(evaluateAnswer, 9000);
-
-  // moveDiv();
   }
 
 
@@ -77,9 +81,6 @@ function displayDefinition(words, guessCount) {
 function calculatePercentage(correctCount, totalCount) {
   $('#percentScoreBox').html(correctCount + '/' + totalCount);
 }
-
-//   $('#percentScoreBox').html(correctCount/totalCount*100 + '%   A.K.A.  ' + correctCount + '/' + totalCount );
-// }
 
 function evaluateAnswer() {
     var userEntry = $('#userEntry').val();
@@ -100,24 +101,12 @@ function evaluateAnswer() {
       
       }, 1350);
 
-      // $("#sideWalk").hide();
-      // window.setTimeout(function() {
-      // $("#sideWalk").show();
-      // }, 1350);
-
-
-      
-      //appear goku, blast zombie
-      // $("images/goku.gif").show();
-      //then zombie dissapear
-      
-      //then goku disappear
       //tally one correct answer:
       correctCount++;
       totalCount++;
       }else{
-
-      $('#feedback').html('You have failed to rescue our beloved friend Spongebob from the infection. The only known cure is back at the start of the game, click "antidote" to save him, then make it through with no mistakes to keep our friend alive!');
+        $('#title').hide()
+;        $('#feedback').html('You have failed to rescue our beloved friend Spongebob from the infection. The only known cure is back at the start of the game, click "antidote" to save him, then make it through with no mistakes to keep our friend alive!');
 
       //tally one wrong answer:
       totalCount++;
