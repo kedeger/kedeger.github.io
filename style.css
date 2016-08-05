@@ -1,3 +1,102 @@
 h1 {
+  color: white;
+  text-align: center;
+}
+
+body {
+    background-color: black;
+}
+
+#movingDiv {
+  background-color: lime;
+}
+
+#movingDiv > p{
+  position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+/*#zombieWalk {
+    vertical-align: bottom;
+    position:absolute;
+    width:291px;
+    height:450px;
+    left:350px;
+    top:200px;
+}*/
+
+#sideWalk {
+  position: absolute;
+  width:125px;
+  height:146px;
+  margin-right: 700px;
+  left: 0;
+}
+
+#normalBob, #zombieBob {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 2% 2% 0 0;
+}
+#normalBob {
+  width: 50px;
+  height: 76.4px;
+}
+#zombieBob {
+  width: 77.89px;
+  height: 101.22px;
+}
+
+#qStuff {
+  text-align: center;
+}
+
+#animationBox {
+  width: 75%;
+  height: 300px;
+  background-color: lime;
+  border: 7px solid grey;
+  text-align: center;
+  margin-left: 12.5%;
+  position: relative;
+}
+
+#feedback {
   color: red;
+}
+#percentScoreBox {
+  color: black;
+}
+
+
+#scoreDiv {
+  text-align: center;
+  border: 7px grey solid;
+  width: 100px;
+  height: 50px;
+  background-color: white;
+  color: lime
+}
+
+#goku {
+  height: 247.5px;
+  width: 757.5px;
+  padding-bottom: 400px;
+}
+
+/*#zombieBob {
+  top: 0;
+  right: 0;
+  height: 100px;
+  width: 100px;
+}*/
+
+#winnerDiv {
+  text-align: center;
+}
+#winnerGif {
+  width: 1000px;
+  height: 502px;
 }
